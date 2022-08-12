@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-auth/miniweibo-auth.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-auth/miniweibo-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-codegen/miniweibo-codegen.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-codegen/miniweibo-codegen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-bom/miniweibo-common-bom.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-bom/miniweibo-common-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-core/miniweibo-common-core.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-core/miniweibo-common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-datasource/miniweibo-common-datasource.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-datasource/miniweibo-common-datasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-feign/miniweibo-common-feign.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-feign/miniweibo-common-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-job/miniweibo-common-job.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-job/miniweibo-common-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-log/miniweibo-common-log.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-log/miniweibo-common-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-mybatis/miniweibo-common-mybatis.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-mybatis/miniweibo-common-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-seata/miniweibo-common-seata.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-seata/miniweibo-common-seata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-security/miniweibo-common-security.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-security/miniweibo-common-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-swagger/miniweibo-common-swagger.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-swagger/miniweibo-common-swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-gateway/miniweibo-gateway.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-gateway/miniweibo-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-monitor/miniweibo-monitor.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-monitor/miniweibo-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-register/miniweibo-register.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-register/miniweibo-register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-sentinel-dashboard/miniweibo-sentinel-dashboard.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-sentinel-dashboard/miniweibo-sentinel-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms-api/miniweibo-upms-api.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms-api/miniweibo-upms-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms-biz/miniweibo-upms-biz.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms-biz/miniweibo-upms-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-visual.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-visual.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-xxl-job-admin/miniweibo-xxl-job-admin.iml" filepath="$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-xxl-job-admin/miniweibo-xxl-job-admin.iml" />
+    </modules>
+  </component>
+</project>

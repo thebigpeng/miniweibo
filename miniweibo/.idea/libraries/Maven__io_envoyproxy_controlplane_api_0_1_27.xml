@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.envoyproxy.controlplane:api:0.1.27">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Software/maven-3.8.5/repository/io/envoyproxy/controlplane/api/0.1.27/api-0.1.27.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../Software/maven-3.8.5/repository/io/envoyproxy/controlplane/api/0.1.27/api-0.1.27-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Software/maven-3.8.5/repository/io/envoyproxy/controlplane/api/0.1.27/api-0.1.27-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

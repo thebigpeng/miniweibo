@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-seata/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-seata/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-common/miniweibo-common-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-register/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-register/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-upms/miniweibo-upms-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-codegen/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-codegen/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-monitor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-sentinel-dashboard/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-sentinel-dashboard/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-sentinel-dashboard/src/main/webapp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-xxl-job-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniweibo/miniweibo-visual/miniweibo-xxl-job-admin/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

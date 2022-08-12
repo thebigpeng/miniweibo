@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+    com.bigpeng.miniweibo.common.log.init.ApplicationLoggerInitializer

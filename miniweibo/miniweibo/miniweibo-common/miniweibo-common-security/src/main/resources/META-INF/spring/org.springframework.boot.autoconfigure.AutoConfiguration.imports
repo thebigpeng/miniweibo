@@ -1,0 +1,7 @@
+com.bigpeng.miniweibo.common.security.service.MiniweiboUserDetailsServiceImpl
+com.bigpeng.miniweibo.common.security.service.MiniweiboAppUserDetailsServiceImpl
+com.bigpeng.miniweibo.common.security.service.MiniweiboRedisOAuth2AuthorizationService
+com.bigpeng.miniweibo.common.security.service.MiniweiboRedisOAuth2AuthorizationConsentService
+com.bigpeng.miniweibo.common.security.component.MiniweiboSecurityInnerAspect
+com.bigpeng.miniweibo.common.security.component.MiniweiboSecurityMessageSourceConfiguration
+com.bigpeng.miniweibo.common.security.service.MiniweiboRemoteRegisteredClientRepository

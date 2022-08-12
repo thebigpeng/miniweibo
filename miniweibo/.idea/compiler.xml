@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="miniweibo-common-seata" />
+        <module name="miniweibo-common-swagger" />
+        <module name="miniweibo-common-datasource" />
+        <module name="miniweibo-gateway" />
+        <module name="miniweibo-auth" />
+        <module name="miniweibo-common-job" />
+        <module name="miniweibo-codegen" />
+        <module name="miniweibo-common-feign" />
+        <module name="miniweibo-sentinel-dashboard" />
+        <module name="miniweibo-xxl-job-admin" />
+        <module name="miniweibo-upms-biz" />
+        <module name="miniweibo-common-core" />
+        <module name="miniweibo-common-log" />
+        <module name="miniweibo-register" />
+        <module name="miniweibo-common-mybatis" />
+        <module name="miniweibo-upms-api" />
+        <module name="miniweibo-common-security" />
+        <module name="miniweibo-monitor" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="miniweibo" target="1.8" />
+      <module name="miniweibo-auth" target="1.8" />
+      <module name="miniweibo-codegen" target="1.8" />
+      <module name="miniweibo-common" target="1.8" />
+      <module name="miniweibo-common-bom" target="1.8" />
+      <module name="miniweibo-common-core" target="1.8" />
+      <module name="miniweibo-common-datasource" target="1.8" />
+      <module name="miniweibo-common-feign" target="1.8" />
+      <module name="miniweibo-common-job" target="1.8" />
+      <module name="miniweibo-common-log" target="1.8" />
+      <module name="miniweibo-common-mybatis" target="1.8" />
+      <module name="miniweibo-common-seata" target="1.8" />
+      <module name="miniweibo-common-security" target="1.8" />
+      <module name="miniweibo-common-swagger" target="1.8" />
+      <module name="miniweibo-gateway" target="1.8" />
+      <module name="miniweibo-monitor" target="1.8" />
+      <module name="miniweibo-register" target="1.8" />
+      <module name="miniweibo-sentinel-dashboard" target="1.8" />
+      <module name="miniweibo-upms" target="1.8" />
+      <module name="miniweibo-upms-api" target="1.8" />
+      <module name="miniweibo-upms-biz" target="1.8" />
+      <module name="miniweibo-visual" target="1.8" />
+      <module name="miniweibo-xxl-job-admin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

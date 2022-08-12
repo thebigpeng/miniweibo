@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.undertow:undertow-websockets-jsr:2.2.18.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Software/maven-3.8.5/repository/io/undertow/undertow-websockets-jsr/2.2.18.Final/undertow-websockets-jsr-2.2.18.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../Software/maven-3.8.5/repository/io/undertow/undertow-websockets-jsr/2.2.18.Final/undertow-websockets-jsr-2.2.18.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Software/maven-3.8.5/repository/io/undertow/undertow-websockets-jsr/2.2.18.Final/undertow-websockets-jsr-2.2.18.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

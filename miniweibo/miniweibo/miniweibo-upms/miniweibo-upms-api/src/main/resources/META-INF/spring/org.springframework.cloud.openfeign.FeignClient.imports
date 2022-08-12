@@ -1,0 +1,7 @@
+com.bigpeng.miniweibo.admin.api.feign.RemoteClientDetailsService
+com.bigpeng.miniweibo.admin.api.feign.RemoteDictService
+com.bigpeng.miniweibo.admin.api.feign.RemoteDeptService
+com.bigpeng.miniweibo.admin.api.feign.RemoteLogService
+com.bigpeng.miniweibo.admin.api.feign.RemoteTokenService
+com.bigpeng.miniweibo.admin.api.feign.RemoteUserService
+com.bigpeng.miniweibo.admin.api.feign.RemoteParamService
