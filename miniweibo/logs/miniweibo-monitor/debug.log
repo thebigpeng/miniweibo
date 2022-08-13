@@ -321,3 +321,89 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2022-08-13 12:52:30,810 [SpringApplicationShutdownHook] INFO  [io.undertow.servlet] ServletContextImpl.java:382 - Destroying Spring FrameworkServlet 'dispatcherServlet'
 2022-08-13 12:52:32,838 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:94 - De-registering from Nacos Server now...
 2022-08-13 12:52:32,840 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:114 - De-registration finished.
+2022-08-13 12:52:44,708 [main] INFO  [c.b.miniweibo.monitor.MiniweiboMonitorApplication] StartupInfoLogger.java:55 - Starting MiniweiboMonitorApplication using Java 1.8.0_91 on DESKTOP-KGK70BV with PID 18556 (D:\MyProjects\miniweibo\miniweibo\miniweibo\miniweibo-visual\miniweibo-monitor\target\classes started by Administrator in D:\MyProjects\miniweibo\miniweibo)
+2022-08-13 12:52:44,710 [main] INFO  [c.b.miniweibo.monitor.MiniweiboMonitorApplication] SpringApplication.java:634 - No active profile set, falling back to 1 default profile: "default"
+2022-08-13 12:52:45,485 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=ec849420-672f-3261-a17e-9021107a6535
+2022-08-13 12:52:45,499 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
+2022-08-13 12:52:45,549 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2022-08-13 12:52:45,550 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-08-13 12:52:45,550 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-08-13 12:52:45,551 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-13 12:52:45,551 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-13 12:52:45,551 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-08-13 12:52:45,551 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-08-13 12:52:45,551 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-13 12:52:45,552 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource miniweibo-monitor-dev.yml [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-13 12:52:45,552 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource application-dev.yml [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-13 12:52:45,552 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-13 12:52:45,618 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-08-13 12:52:45,755 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-08-13 12:52:45,772 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:382 - Initializing Spring embedded WebApplicationContext
+2022-08-13 12:52:45,772 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1030 ms
+2022-08-13 12:52:45,841 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-08-13 12:52:45,843 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-08-13 12:52:45,844 [main] INFO  [c.u.j.encryptor.DefaultLazyEncryptor] DefaultLazyEncryptor.java:32 - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2022-08-13 12:52:45,849 [main] INFO  [c.u.j.encryptor.DefaultLazyEncryptor] DefaultLazyEncryptor.java:58 - Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2022-08-13 12:52:45,849 [main] INFO  [c.u.j.encryptor.DefaultLazyEncryptor] DefaultLazyEncryptor.java:58 - Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2022-08-13 12:52:45,849 [main] INFO  [c.u.j.encryptor.DefaultLazyEncryptor] DefaultLazyEncryptor.java:58 - Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2022-08-13 12:52:45,850 [main] INFO  [c.u.j.encryptor.DefaultLazyEncryptor] DefaultLazyEncryptor.java:58 - Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2022-08-13 12:52:45,850 [main] INFO  [c.u.j.encryptor.DefaultLazyEncryptor] DefaultLazyEncryptor.java:58 - Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2022-08-13 12:52:45,850 [main] INFO  [c.u.j.encryptor.DefaultLazyEncryptor] DefaultLazyEncryptor.java:58 - Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2022-08-13 12:52:45,851 [main] INFO  [c.u.j.encryptor.DefaultLazyEncryptor] DefaultLazyEncryptor.java:58 - Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2022-08-13 12:52:46,168 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:55 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7eae55, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d84e363, org.springframework.security.web.context.SecurityContextPersistenceFilter@49d42faf, org.springframework.security.web.header.HeaderWriterFilter@2d913116, org.springframework.security.web.authentication.logout.LogoutFilter@3005623b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@14485747, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@71b0289b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@502c2278, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1209a0f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ef0e576, org.springframework.security.web.session.SessionManagementFilter@41582899, org.springframework.security.web.access.ExceptionTranslationFilter@5635bcd2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e8f23ad]
+2022-08-13 12:52:46,359 [main] WARN  [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] ThymeleafAutoConfiguration.java:103 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-08-13 12:52:47,267 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 18 endpoint(s) beneath base path '/actuator'
+2022-08-13 12:52:47,381 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.18.Final
+2022-08-13 12:52:47,386 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
+2022-08-13 12:52:47,392 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
+2022-08-13 12:52:47,415 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
+2022-08-13 12:52:47,443 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 5001 (http)
+2022-08-13 12:52:47,557 [main] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:75 - nacos registry, DEFAULT_GROUP miniweibo-monitor 192.168.10.104:5001 register finished
+2022-08-13 12:52:48,051 [XNIO-1 task-1] INFO  [io.undertow.servlet] ServletContextImpl.java:382 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-13 12:52:48,051 [XNIO-1 task-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2022-08-13 12:52:48,053 [XNIO-1 task-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
+2022-08-13 12:52:52,701 [main] INFO  [c.b.miniweibo.monitor.MiniweiboMonitorApplication] StartupInfoLogger.java:61 - Started MiniweiboMonitorApplication in 8.734 seconds (JVM running for 9.352)
+2022-08-13 12:52:52,707 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:105 - listening config: dataId=miniweibo-monitor-dev.yml, group=DEFAULT_GROUP
+2022-08-13 12:52:52,707 [main] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:105 - listening config: dataId=application-dev.yml, group=DEFAULT_GROUP
+2022-08-13 12:56:26,063 [com.alibaba.nacos.client.Worker.longPolling.fixed-miniweibo-register_8848] INFO  [c.u.j.caching.RefreshScopeRefreshedEventListener] RefreshScopeRefreshedEventListener.java:35 - Refreshing cached encryptable property sources
+2022-08-13 12:56:26,065 [com.alibaba.nacos.client.Worker.longPolling.fixed-miniweibo-register_8848] INFO  [o.s.cloud.endpoint.event.RefreshEventListener] RefreshEventListener.java:73 - Refresh keys changed: [security.oauth2.ignore.urls[2], spring.security.user.name, spring.security.user.password]
+2022-08-13 12:57:58,545 [com.alibaba.nacos.client.Worker.longPolling.fixed-miniweibo-register_8848] INFO  [c.u.j.caching.RefreshScopeRefreshedEventListener] RefreshScopeRefreshedEventListener.java:35 - Refreshing cached encryptable property sources
+2022-08-13 12:57:58,546 [com.alibaba.nacos.client.Worker.longPolling.fixed-miniweibo-register_8848] INFO  [o.s.cloud.endpoint.event.RefreshEventListener] RefreshEventListener.java:73 - Refresh keys changed: [security.oauth2.ignore.urls[2]]
+2022-08-13 12:59:17,670 [Nacos-Watch-Task-Scheduler-1] INFO  [d.c.b.a.s.c.discovery.InstanceDiscoveryListener] InstanceDiscoveryListener.java:138 - Instance '08d0a5682c4b' missing in DiscoveryClient services and will be removed.
+2022-08-13 13:23:46,090 [SpringApplicationShutdownHook] INFO  [io.undertow] Undertow.java:259 - stopping server: Undertow - 2.2.18.Final
+2022-08-13 13:23:46,092 [SpringApplicationShutdownHook] INFO  [io.undertow.servlet] ServletContextImpl.java:382 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-08-13 13:23:48,113 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:94 - De-registering from Nacos Server now...
+2022-08-13 13:23:54,147 [SpringApplicationShutdownHook] ERROR [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:110 - ERR_NACOS_DEREGISTER, de-register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='miniweibo-register:8848', username='', password='', endpoint='', namespace='', watchDelay=30000, logName='', service='miniweibo-monitor', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.10.104', networkInterface='', port=5001, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null, instanceEnabled=true, ephemeral=true, failureToleranceEnabled=false}, ipDeleteTimeout=null, failFast=true}},
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([miniweibo-register:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:249)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:264)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:201)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.lang.Thread.run(Thread.java:745)
+2022-08-13 13:23:54,147 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:114 - De-registration finished.

@@ -48,9 +48,50 @@
 2. 博文系统：包括用户对博文的发布、删除、点赞、转发、评论（互动），博文的内容包含文字以及图片，
 3. 热搜系统：参考新浪微博的热搜实现进行简单复现，由用户博文的受欢迎程度进行排名展现
 
-### 5. 详细设计
+### 5.配置环境
 
-#### 5.1用户系统
+| 环境名  |  版本  |         描述         |
+| :-----: | :----: | :------------------: |
+|   jdk   |  1.8   |     java项目必备     |
+|  redis  | 4.0.14 |         缓存         |
+|  MySQL  |  8.0   |     关系型数据库     |
+|  node   |   12   |      建议版本14      |
+| navicat |   15   | 数据库可视化管理工具 |
+|   RDM   |  2021  |   redis管理客户端    |
+
+### 6. 如何使用
+
+​	首先将项目整个`clone`到个人本地，会得到两个项目文件夹，`miniweibo-ui`和 `miniweibo`两个文件夹，分别是项目的后台管理前端代码和后台代码。
+
+- 后台管理前端代码启动：
+
+  > 1. 首先安装好node
+  >
+  > 2. 进入到前端代码根目录执行 `npm install  --registry=https://registry.npmmirror.com`指令安装依赖
+  > 3. 在根目录执行 `npm run dev`在dev环境启动项目
+
+- 后端代码启动：
+
+  > 1.修改本地host文件（widows系统下目录一般在C:\Windows\System32\drivers\etc），对请求作本地域名解析，修改内容如下：
+  >
+  > 127.0.0.1   miniweibo-mysql
+  > 127.0.0.1   miniweibo-redis
+  > 127.0.0.1   miniweibo-gateway
+  > 127.0.0.1   miniweibo-register
+  > 127.0.0.1   miniweibo-sentinel
+  > 127.0.0.1   miniweibo-monitor
+  >
+  > 2.执行项目`db`目录的下的sql语句，建立基础数据库表
+  >
+  > 3.首先启动`MiniweiboNacosApplication`服务，然后登录到Nacos注册配置管理中心(默认账号密码nacos/nacos)，nacos负责管理整个项目的配置，直接将上面所有配置文件的数据库的账号密码修改为自己数据库、redis的账号密码。之后再依次启动GatewayApplication服务、AuthApplication服务、AdminApplication服务，其他的为代码生成以及监控的服务，按需求启动。
+
+  
+
+  [项目搭建文档](#doc1)
+
+### 7. 详细设计
+
+#### 7.1用户系统
 
 ​	用户系统是最基本的功能需求，不用多说，直接先设计用户表吧
 
