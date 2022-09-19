@@ -1,4 +1,4 @@
-package com.example.miniweibo;
+package com.pch.miniweibo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
