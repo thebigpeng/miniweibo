@@ -19,9 +19,9 @@
                     <el-menu-item index="/product/list">产品列表</el-menu-item>
                     <el-menu-item index="/product/category">产品分类</el-menu-item>
                 </el-menu-item-group>
-                 
             </el-submenu>
-            <el-menu-item index="2">
+
+            <el-menu-item index="/login">
                 <i class="el-icon-menu"></i>
                 <span slot="title">导航二</span>
             </el-menu-item>
@@ -29,10 +29,18 @@
                 <i class="el-icon-document"></i>
                 <span slot="title">导航三</span>
             </el-menu-item>
-            <el-menu-item index="/login">
-                <i class="el-icon-setting"></i>
-                <span slot="title">系统管理</span>
-            </el-menu-item>
+
+            <el-submenu index="/settings">
+                <template slot="title">
+                    <i class="el-icon-setting"></i>
+                    <span>系统管理</span>
+                </template>
+                <el-menu-item-group>
+                    <el-menu-item index="/settings/user">用户管理</el-menu-item>
+                    <el-menu-item index="/settings/role">角色管理</el-menu-item>
+                </el-menu-item-group>
+            </el-submenu>
+
         </el-menu>
     </div>
 </template>

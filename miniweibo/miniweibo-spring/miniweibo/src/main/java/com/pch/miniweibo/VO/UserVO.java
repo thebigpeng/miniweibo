@@ -29,9 +29,11 @@ public class UserVO {
 
     private Integer deptId;
 
-    private Character lock_flag;
+    //1--锁定；0--有效
+    private Integer lock_flag;
 
-    private Character delFlag;
+    //1--已删除；0--未删除
+    private Integer delFlag;
 
     private LocalDateTime createTime;
 

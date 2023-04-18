@@ -6,16 +6,16 @@ import Home from '@/views/home/home.vue'
 
 
 // 懒加载
-const Product = ()=>import('@/views/product/index.vue')
-
+const Product = () => import('@/views/product/index.vue')
+const Setting = () => import('@/views/settings/index.vue')
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path:'/',
+    path: '/',
     name: 'home',
     component: Layout,
-    children:[
+    children: [
       {
         path: '/',
         name: 'home',
@@ -25,29 +25,50 @@ const routes = [
         path: '/product',
         name: 'product',
         component: Product,
-        children:[
+        children: [
           {
             path: 'list',  //访问路径：/product/list 这里不用配 / 不然会从根目录访问
-            name : 'list',
+            name: 'list',
             component: () => import('../views/product/list/index.vue')
           },
           {
             path: 'category',  //访问路径：/product/list 这里不用配 / 不然会从根目录访问
-            name : 'category',
+            name: 'category',
             component: () => import('../views/product/category/index.vue')
+          }
+        ]
+      },
+      {
+        path: '/settings',
+        name: 'settings',
+        component: Setting,
+        children: [
+          {
+            path: 'user',
+            name: 'user',
+            component: () => import('@/views/settings/user/index.vue')
+          },
+          {
+            path: 'role',
+            name: 'role',
+            component: () => import('@/views/settings/role/index.vue')
           }
         ]
       }
     ]
 
-    // component: () => import('../views/layout/index.vue')
   },
   {
-    path:'/login',
+    path: '/login',
     name: 'login',
     component: Login
     // component: () => import('../views/login/index.vue')
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
+
 ]
 
 const router = new VueRouter({
