@@ -1,3 +1,0 @@
-com.bigpeng.miniweibo.common.feign.MiniweiboFeignAutoConfiguration
-com.bigpeng.miniweibo.common.feign.sentinel.SentinelAutoConfiguration
-com.bigpeng.miniweibo.common.feign.sentinel.handle.GlobalBizExceptionHandler

@@ -1,6 +1,0 @@
-com.bigpeng.miniweibo.common.core.config.TaskExecutorConfiguration
-com.bigpeng.miniweibo.common.core.config.JacksonConfiguration
-com.bigpeng.miniweibo.common.core.config.RedisTemplateConfiguration
-com.bigpeng.miniweibo.common.core.config.RestTemplateConfiguration
-com.bigpeng.miniweibo.common.core.util.SpringContextHolder
-com.bigpeng.miniweibo.common.core.config.WebMvcConfiguration
