@@ -13,6 +13,17 @@ public interface UserService extends IService<UserVO> {
      */
     UserVO getUserByName(String username);
 
-    boolean loginCheck(String username, String password);
+    boolean loginCheck(String username, String password) throws Exception;
+
+    /**
+     * 注册
+     * @param userVO
+     * @return
+     * @throws Exception
+     */
+    boolean register(UserVO userVO) throws Exception;
+
+    UserVO voToPo(UserVO vo);
+
 
 }

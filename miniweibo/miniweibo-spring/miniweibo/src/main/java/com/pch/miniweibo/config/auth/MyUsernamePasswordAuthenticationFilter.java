@@ -1,11 +1,16 @@
 package com.pch.miniweibo.config.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pch.miniweibo.Api.UserService;
+import com.pch.miniweibo.Enums.ExceptionEnum;
+import com.pch.miniweibo.Enums.MyAuthenticationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,40 +23,48 @@ import java.util.Map;
  * @description: TODO 类描述
  * @author: pengchenhui
  * @date: 2023/4/18
- **/
+ */
 public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
-    @Override
-    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 
-        if (request.getContentType().equals(MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE) || request.getContentType().equals(MediaType.APPLICATION_JSON_VALUE)) {
-            ObjectMapper mapper = new ObjectMapper();
-            UsernamePasswordAuthenticationToken authenticationToken = null;
-            //取authenticationBean
-            Map<String, String> authenticationBean = null;
-            //用try with resource，方便自动释放资源
-            try (InputStream inputStream = request.getInputStream()) {
-                authenticationBean = mapper.readValue(inputStream, Map.class);
-            } catch (IOException e) {
-                //将异常放到自定义的异常类中
+  @Autowired private UserService userService;
 
-            }
+  @Override
+  public Authentication attemptAuthentication(
+      HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 
-            try {
-                if (!authenticationBean.isEmpty()){
-                    //获取传入的账号和密码
-                    String username = authenticationBean.get(SPRING_SECURITY_FORM_USERNAME_KEY);
-                    String password = authenticationBean.get(SPRING_SECURITY_FORM_PASSWORD_KEY);
+    if (request.getContentType().equals(MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE)
+        || request.getContentType().equals(MediaType.APPLICATION_JSON_VALUE)) {
+      ObjectMapper mapper = new ObjectMapper();
+      UsernamePasswordAuthenticationToken authenticationToken = null;
+      // 取authenticationBean
+      Map<String, String> authenticationBean = null;
+      // 用try with resource，方便自动释放资源
+      try (InputStream inputStream = request.getInputStream()) {
+        authenticationBean = mapper.readValue(inputStream, Map.class);
+      } catch (IOException e) {
+        // 将异常放到自定义的异常类中
+        throw new MyAuthenticationException(e.getMessage());
+      }
 
-                    //验证账号密码的正确性
-                    if (true){
+      try {
+        if (!authenticationBean.isEmpty()) {
+          // 获取传入的账号和密码
+          String username = authenticationBean.get(SPRING_SECURITY_FORM_USERNAME_KEY);
+          String password = authenticationBean.get(SPRING_SECURITY_FORM_PASSWORD_KEY);
 
-                    }
-                }
-            }catch (Exception e){
-
-            }
+          // 验证账号密码的正确性
+          if (userService.loginCheck(username, password)) {
+            authenticationToken = new UsernamePasswordAuthenticationToken(username, password);
+            setDetails(request, authenticationToken);
+            return this.getAuthenticationManager().authenticate(authenticationToken);
+          }
         }
-
-        return super.attemptAuthentication(request, response);
+      } catch (Exception e) {
+        throw new MyAuthenticationException(e.getMessage());
+      }
+      return null;
     }
+
+    return super.attemptAuthentication(request, response);
+  }
 }

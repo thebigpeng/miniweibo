@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  * @author: pengchenhui
  * @date: 2022/9/20
  **/
-@TableName("sys_user")
+@TableName("user_info")
 @Data
 public class UserVO {
     private Integer userId;

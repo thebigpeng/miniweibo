@@ -1,25 +1,36 @@
 package com.pch.miniweibo.Controller;
 
+import com.baomidou.mybatisplus.extension.api.ApiController;
+import com.baomidou.mybatisplus.extension.api.R;
+import com.pch.miniweibo.Api.UserService;
 import com.pch.miniweibo.Enums.StatusEnum;
 import com.pch.miniweibo.VO.ResponseResult;
 import com.pch.miniweibo.VO.UserVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/users")
-public class UserController {
+@RequestMapping(value = "user")
+public class UserController extends ApiController {
 
-    public String login(){
-        return "redirect:main.html";
+  @Autowired UserService userService;
+
+  public String login() {
+    return "redirect:main.html";
+  }
+
+  @PostMapping("register")
+  public R userRegister(@RequestBody(required = false) UserVO userVO) {
+    try {
+      System.out.println("registerVo = " + userVO);
+      return success(userService.register(userVO));
+    } catch (Exception e) {
+      return failed(e.getMessage());
     }
-
-    @PostMapping("/regist")
-    public ResponseResult<UserVO> userRegister(){
-
-
-        return new ResponseResult(new UserVO(), StatusEnum.REGISIT_FAILD.getCode(), StatusEnum.REGISIT_FAILD.getDesc());
-    }
-
+    //        return new ResponseResult(new UserVO(), StatusEnum.REGISIT_FAILD.getCode(),
+    // StatusEnum.REGISIT_FAILD.getDesc());
+  }
 }
