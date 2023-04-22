@@ -45,7 +45,7 @@ public class MyUserDetailServiceImpl implements UserDetailsService {
                 authorities.add(new SimpleGrantedAuthority(role));
             }
             System.out.println("loadUserByUsername......user ===> " + user);
-            return new AuthUser(user.getUsername(),user.getPassword(),user.getLock_flag(),authorities);
+            return new AuthUser(user.getUserName(),user.getPassWord(),user.getLockFlag(),authorities);
         }
     }
 }

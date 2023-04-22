@@ -25,8 +25,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserVO> implements 
   public UserVO getUserByName(String username) {
     LambdaQueryWrapper<UserVO> queryWrapper = new LambdaQueryWrapper<>();
     queryWrapper
-        .eq(UserVO::getUsername, username)
-        .eq(UserVO::getLock_flag, USER_LOCK_STATE)
+        .eq(UserVO::getUserName, username)
+        .eq(UserVO::getLockFlag, USER_LOCK_STATE)
         .eq(UserVO::getDelFlag, USER_DELETE_STATE);
     UserVO userVO = this.getOne(queryWrapper);
     return userVO;
@@ -46,7 +46,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserVO> implements 
     if (userVO == null) {
       throw new Exception("账号不存在!");
     } else {
-      String encodePwd = userVO.getPassword();
+      String encodePwd = userVO.getPassWord();
       if (!bCryptPasswordEncoder.matches(password, encodePwd)) {
         throw new Exception("密码不正确！");
       } else {
@@ -59,7 +59,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserVO> implements 
   public boolean register(UserVO userVO) throws Exception {
 
     if (userVO != null) {
-      UserVO user = this.getUserByName(userVO.getUsername());
+      UserVO user = this.getUserByName(userVO.getUserName());
       if (user != null) {
         throw new Exception("这个用户已经存在，不能重复。");
       }
@@ -73,10 +73,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserVO> implements 
   @Override
   public UserVO voToPo(UserVO vo) {
     UserVO userVO = new UserVO();
-    userVO.setUsername(vo.getUsername());
-    userVO.setPassword(bCryptPasswordEncoder.encode(vo.getPassword()));
+    userVO.setUserName(vo.getUserName());
+    userVO.setPassWord(bCryptPasswordEncoder.encode(vo.getPassWord()));
     userVO.setDelFlag(0);
-    userVO.setLock_flag(0);
+    userVO.setLockFlag(0);
     userVO.setPhone(vo.getPhone());
     return userVO;
   }

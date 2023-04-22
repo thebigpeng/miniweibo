@@ -1,5 +1,7 @@
 package com.pch.miniweibo.VO;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -11,39 +13,45 @@ import java.time.LocalDateTime;
  * @description: TODO 类描述
  * @author: pengchenhui
  * @date: 2022/9/20
- **/
-@TableName("user_info")
+ */
+@TableName("sys_user_table")
 @Data
 public class UserVO {
-    private Integer userId;
+  @TableId(type = IdType.UUID)
+  private String userId;
 
-    private String username;
+  private String userName;
 
-    private String password;
+  /** 用户密码-BCR算法加密 */
+  private String passWord;
 
-    private String salt;
+  /** 描述 */
+  private String description;
 
-    private String phone;
+  /** 状态 */
+  private Integer state;
 
-    private String avatar;
+  private String salt;
 
-    private Integer deptId;
+  private String phone;
 
-    //1--锁定；0--有效
-    private Integer lock_flag;
+  private String avatar;
 
-    //1--已删除；0--未删除
-    private Integer delFlag;
+  // 1--锁定；0--有效
+  private Integer lockFlag;
 
-    private LocalDateTime createTime;
+  // 1--已删除；0--未删除
+  private Integer delFlag;
 
-    private LocalDateTime updateTime;
+  private LocalDateTime createTime;
 
-    private String createBy;
+  private LocalDateTime updateTime;
 
-    private String updateBy;
+  private String createBy;
 
-    private Integer level;
+  private String updateBy;
 
-    private String grade;
+  private Integer level;
+
+  private Integer grade;
 }
