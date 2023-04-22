@@ -1,7 +1,7 @@
-package com.pch.miniweibo.Dao;
+package com.pch.miniweibo.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.pch.miniweibo.Dao.provider.BackendApiProvider;
+import com.pch.miniweibo.dao.provider.BackendApiProvider;
 import com.pch.miniweibo.VO.BackendApiVO;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

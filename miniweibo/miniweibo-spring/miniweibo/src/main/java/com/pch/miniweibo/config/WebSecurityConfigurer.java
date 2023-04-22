@@ -1,28 +1,67 @@
 package com.pch.miniweibo.config;
 
-import com.pch.miniweibo.config.auth.MyAuthenticationSuccessHandler;
-import com.pch.miniweibo.config.auth.MyUsernamePasswordAuthenticationFilter;
+import com.pch.miniweibo.Utils.BCryptPasswordEncoderUtil;
+import com.pch.miniweibo.Utils.DynamicPermission;
+import com.pch.miniweibo.config.auth.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.util.AntPathMatcher;
 import org.springframework.web.cors.CorsUtils;
 
-/**
- * @className: WebSecurityConfigurer
- * @description: TODO 类描述
- * @author: pengchenhui
- * @date: 2023/4/18
- */
+/** Security授权配置主文件 */
+@Configuration
 public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
+
+  @Autowired
+  @Qualifier("myUserDetailServiceImpl")
+  private UserDetailsService userDetailsService;
+
+  @Autowired private MyOncePerRequestFilter myOncePerRequestFilter;
+  @Autowired private MyAuthenticationEntryPoint myAuthenticationEntryPoint;
+
+  @Autowired
+  private MyAccessDeniedHandler myAccessDeniedHandler;
 
   // 登录成功处理器
   @Autowired private MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
+    @Autowired
+    private MyAuthenticationFailureHandler myAuthenticationFailureHandler;
+    //退出处理器
+    @Autowired
+    private MyLogoutHandler myLogoutHandler;
 
+    @Autowired
+    private MyLogoutSuccessHandler myLogoutSuccessHandler;
 
+  @Autowired BCryptPasswordEncoderUtil bCryptPasswordEncoderUtil;
+
+  @Autowired DynamicPermission dynamicPermission;
+
+  /**
+   * 从容器中取出 AuthenticationManagerBuilder，执行方法里面的逻辑之后，放回容器
+   *
+   * @param authenticationManagerBuilder
+   * @throws Exception
+   */
+  @Autowired
+  public void configureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder)
+      throws Exception {
+    authenticationManagerBuilder
+        .userDetailsService(userDetailsService)
+        .passwordEncoder(bCryptPasswordEncoderUtil);
+  }
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
@@ -59,13 +98,26 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
         // 动态加载资源
         .anyRequest()
-            .access("@dynamicPermission.checkPermisstion(request,authentication)");
+        .access("@dynamicPermission.checkPermisstion(request,authentication)");
 
-    //第4步：拦截账号、密码。覆盖 UsernamePasswordAuthenticationFilter过滤器
-    http.addFilterAt(myUsernamePasswordAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+    // 第4步：拦截账号、密码。覆盖 UsernamePasswordAuthenticationFilter过滤器
+    http.addFilterAt(
+        myUsernamePasswordAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+
+    // 第5步：拦截token，并检测。在 UsernamePasswordAuthenticationFilter 之前添加 JwtAuthenticationTokenFilter
+    http.addFilterBefore(myOncePerRequestFilter, UsernamePasswordAuthenticationFilter.class);
+
+    // 第6步：处理异常情况：认证失败和权限不足
+    http.exceptionHandling()
+        .authenticationEntryPoint(myAuthenticationEntryPoint)
+        .accessDeniedHandler(myAccessDeniedHandler);
 
     // 第7步：登录,因为使用前端发送JSON方式进行登录，所以登录模式不设置也是可以的。
     http.formLogin();
+
+    // 第8步：退出
+    //
+     http.logout().addLogoutHandler(myLogoutHandler).logoutSuccessHandler(myLogoutSuccessHandler);
   }
 
   /**
@@ -80,7 +132,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     // 成功后处理
     filter.setAuthenticationSuccessHandler(myAuthenticationSuccessHandler);
     // 失败后处理
-    //    filter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
+        filter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
 
     filter.setAuthenticationManager(authenticationManagerBean());
     return filter;

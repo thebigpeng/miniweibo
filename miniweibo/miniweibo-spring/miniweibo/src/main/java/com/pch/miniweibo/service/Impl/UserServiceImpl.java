@@ -1,16 +1,12 @@
-package com.pch.miniweibo.Api.Impl;
+package com.pch.miniweibo.service.Impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.pch.miniweibo.Api.UserService;
-import com.pch.miniweibo.Dao.UserMapper;
+import com.pch.miniweibo.service.UserService;
+import com.pch.miniweibo.dao.UserMapper;
 import com.pch.miniweibo.Utils.BCryptPasswordEncoderUtil;
 import com.pch.miniweibo.VO.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service

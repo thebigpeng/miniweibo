@@ -1,4 +1,4 @@
-package com.pch.miniweibo.Api;
+package com.pch.miniweibo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.pch.miniweibo.VO.BackendApiVO;

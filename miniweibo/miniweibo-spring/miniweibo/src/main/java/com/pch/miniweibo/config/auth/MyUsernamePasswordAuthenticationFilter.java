@@ -1,8 +1,7 @@
 package com.pch.miniweibo.config.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pch.miniweibo.Api.UserService;
-import com.pch.miniweibo.Enums.ExceptionEnum;
+import com.pch.miniweibo.service.UserService;
 import com.pch.miniweibo.Enums.MyAuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -10,7 +9,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

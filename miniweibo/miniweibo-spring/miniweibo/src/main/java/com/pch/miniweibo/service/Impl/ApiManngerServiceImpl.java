@@ -1,8 +1,8 @@
-package com.pch.miniweibo.Api.Impl;
+package com.pch.miniweibo.service.Impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.pch.miniweibo.Api.ApiManngerService;
-import com.pch.miniweibo.Dao.BackendApiDao;
+import com.pch.miniweibo.service.ApiManngerService;
+import com.pch.miniweibo.dao.BackendApiDao;
 import com.pch.miniweibo.VO.BackendApiVO;
 import org.springframework.stereotype.Service;
 

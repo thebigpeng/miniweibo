@@ -3,6 +3,7 @@ package com.pch.miniweibo.config;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @className: MybatisPlusConfig
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @date: 2022/9/20
  **/
 @Configuration
+@EnableTransactionManagement
 public class MybatisPlusConfig {
     /**
      * 分页插件

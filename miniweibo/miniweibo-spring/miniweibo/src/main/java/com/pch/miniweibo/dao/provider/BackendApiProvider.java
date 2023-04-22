@@ -1,4 +1,4 @@
-package com.pch.miniweibo.Dao.provider;
+package com.pch.miniweibo.dao.provider;
 
 import org.apache.ibatis.jdbc.SQL;
 

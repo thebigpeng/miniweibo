@@ -1,4 +1,4 @@
-package com.pch.miniweibo.Dao;
+package com.pch.miniweibo.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.pch.miniweibo.VO.UserVO;
